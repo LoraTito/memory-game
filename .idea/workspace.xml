@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5c66707-c64c-4cad-96aa-852fedeb801b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/fend-project-memory-game-master/css/app.css" afterPath="$PROJECT_DIR$/fend-project-memory-game-master/css/app.css" />
-      <change beforePath="$PROJECT_DIR$/fend-project-memory-game-master/index.html" afterPath="$PROJECT_DIR$/fend-project-memory-game-master/index.html" />
       <change beforePath="$PROJECT_DIR$/fend-project-memory-game-master/js/app.js" afterPath="$PROJECT_DIR$/fend-project-memory-game-master/js/app.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +16,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1756">
-              <caret line="99" column="26" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -28,7 +26,7 @@
       <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/css/app.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="-2006">
               <caret line="152" column="16" lean-forward="false" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
               <folding />
             </state>
@@ -38,8 +36,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="249">
+              <caret line="194" column="17" lean-forward="true" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -53,12 +51,14 @@
     <findStrings>
       <find>let</find>
       <find>var</find>
+      <find>starCount</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>let</replace>
       <replace>var</replace>
       <replace>let</replace>
+      <replace>countCards</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -227,12 +227,12 @@
       <workItem from="1522865207194" duration="599000" />
       <workItem from="1522870037261" duration="93000" />
       <workItem from="1523216036571" duration="21000" />
-      <workItem from="1523981559835" duration="2179000" />
+      <workItem from="1523981559835" duration="6225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33694000" />
+    <option name="totallyTimeSpent" value="37740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -692,7 +692,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
+        <state relative-caret-position="-2006">
           <caret line="152" column="16" lean-forward="false" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
           <folding />
         </state>
@@ -700,16 +700,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1756">
-          <caret line="99" column="26" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+        <state relative-caret-position="162">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="249">
+          <caret line="194" column="17" lean-forward="true" selection-start-line="194" selection-start-column="17" selection-end-line="194" selection-end-column="17" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

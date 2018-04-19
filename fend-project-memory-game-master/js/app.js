@@ -10,13 +10,13 @@
  *   - add each card's HTML to the page
  */
 /* scores the deck of cards */
-const cardDeck = document.querySelector('.deck');
+const deck = document.querySelector('.deck');
 
 /* nodelist of all cards */
-let cardStack = document.querySelectorAll('.card');
+let stackCards = document.querySelectorAll('.card');
 
-/* creates array initialized to cardStack */
-let cardArray = [...cardStack];
+/* creates array initialized to stackCards */
+let allCardsArray = [...stackCards];
 
 /* initial moves count */
 let moves = 0;
@@ -25,10 +25,10 @@ let moves = 0;
 let count = document.querySelector('.moves');
 
 /* adds stars to array for rating */
-const starCount = document.querySelectorAll('.fa-star');
+const beginCounting = document.querySelectorAll('.fa-star');
 
 /* counts number of cards matched */
-let matchList = 0;
+let matches = 0;
 
 /* accesses the timer at the top of the game */
 let timer = document.querySelector('.gameTimer');
@@ -46,7 +46,7 @@ let timePassed;
 let isAnimating = true;
 
 /* accesses class "rating" in html */
-let endStar= document.querySelector('.rating');
+let endStar = document.querySelector('.rating');
 
 /*accesses the ending time for the modal display */
 let endTime = document.querySelector('.endTime');
@@ -70,8 +70,9 @@ document.body.onload = displayCards;
  * @description: changes .restart to a clickable event which triggers the
  * function displayCards
  */
-let replayGame= document.querySelector('.restart');
+let replayGame = document.querySelector('.restart');
 replayGame.onclick = displayCards;
+
 /**
  * @description: Shuffle function from http://stackoverflow.com/a/2450976
  * @param: Name: array, type: array
@@ -90,31 +91,32 @@ function shuffle(array) {
 
     return array;
 }
+
 /**
  * @description: calls the shuffle function and displays all cards face down
  */
 function displayCards() {
-    cardArray = shuffle(cardArray);
-    let tempHolder= [];
-    for (let i=0; i < cardArray.length; i++) {
-        cardDeck.innerHTML ='';
-        tempHolder.forEach.call(cardArray, function(item){
-            cardDeck.appendChild(item);
+    allCardsArray = shuffle(allCardsArray);
+    let holder = [];
+    for (let i = 0; i < allCardsArray.length; i++) {
+        deck.innerHTML = '';
+        holder.forEach.call(allCardsArray, function (item) {
+            deck.appendChild(item);
         });
-        cardArray[i].classList.remove('show', 'open', 'match', 'unmatched', 'disabled');
+        allCardsArray[i].classList.remove('show', 'open', 'match', 'unmatched', 'disabled');
     }
-    moves =0;
-    matchList =0;
+    moves = 0;
+    matches = 0;
     count.innerHTML = 0;
-    for (let i=0; i < starCount.length; i++){
-        starCount[i].style.visibility = 'visible';
+    for (let i = 0; i < beginCounting.length; i++) {
+        beginCounting[i].style.visibility = 'visible';
     }
     /*starts/restarts timer */
     clearInterval(timePassed);
     /* resets all letiables and innerHTML */
-    hour =0;
-    minute=0;
-    second =0;
+    hour = 0;
+    minute = 0;
+    second = 0;
     timer.innerHTML = hour + ' hours ' + minute + ' mins ' + second + ' secs';
     endTime.innerHTML = '';
     endMoves.innerHTML = '';
@@ -124,23 +126,24 @@ function displayCards() {
     modalSelector.classList.remove('show');
     gameTime();
 }
+
 /**
  * @description: open and compare cards
  *opens the cards and pushes it into the array.
  * Compares cards and executes code or calls function whether or not they match.
  */
-let openCard = function(){
-    if(isAnimating) return;
+let openCard = function () {
+    if (isAnimating) return;
     this.classList.toggle('open');
     this.classList.toggle('show');
     this.classList.toggle('disabled');
     openCards.push(this);
-    let  cardCount = openCards.length;
-    if (cardCount === 2) {
+    let countCards = openCards.length;
+    if (countCards === 2) {
         movesCounter();
-        if (openCards[0].firstElementChild.className === openCards[1].firstElementChild.className){
-            matchList++;
-            for (let i=0; i < 2; i++){
+        if (openCards[0].firstElementChild.className === openCards[1].firstElementChild.className) {
+            matches++;
+            for (let i = 0; i < 2; i++) {
                 openCards[i].classList.add('match');
                 openCards[i].classList.remove('show', 'open');
             }
@@ -150,58 +153,62 @@ let openCard = function(){
         }
     }
     finished();
-}
+};
+
 /**
  /* @description: sets delay when cards don't match and flips over
  */
-function notMatch(){
-    isAnimating =true;
-    for (let i=0; i < 2; i++){
+function notMatch() {
+    isAnimating = true;
+    for (let i = 0; i < 2; i++) {
         openCards[i].classList.add('unmatched');
     }
-    setTimeout(function(){
+    setTimeout(function () {
         isAnimating = false;
-        for (let i=0; i < openCards.length; i++){
+        for (let i = 0; i < openCards.length; i++) {
             openCards[i].classList.remove('show', 'open', 'unmatched', 'disabled');
         }
         openCards = [];
     }, 2000);
 }
+
 /**
  * @description: Adds 1 each time 2 cards are clicked and updates the moves
  * in index.html. Tracks moves and adjusts star rating.
  */
-function movesCounter(){
-    moves ++;
+function movesCounter() {
+    moves++;
     count.innerHTML = moves;
-    if (moves < 30 && moves > 24){
-        starCount[2].style.visibility = 'collapse';
-    } else if (moves > 30){
-        starCount[1].style.visibility = 'collapse';
+    if (moves < 30 && moves > 24) {
+        beginCounting[2].style.visibility = 'collapse';
+    } else if (moves > 30) {
+        beginCounting[1].style.visibility = 'collapse';
     }
 }
+
 /**
  * @description: game timer
  */
-function gameTime(){
-    timePassed = setInterval(function(){
+function gameTime() {
+    timePassed = setInterval(function () {
         timer.innerHTML = hour + ' hours ' + minute + ' mins ' + second + ' secs';
-        second ++;
-        if (second == 60){
-            minute ++;
-            second =0;
+        second++;
+        if (second == 60) {
+            minute++;
+            second = 0;
         }
-        if (minute == 60){
+        if (minute == 60) {
             hour++;
             minute = 0;
         }
     }, 1000);
 }
+
 /**
  * @description: modal for when all cards are matched
  */
 function finished() {
-    if (matchList === 8){
+    if (matches === 8) {
         clearInterval(timePassed);
         endTime.innerHTML = timer.innerHTML;
         endMoves.innerHTML = count.innerHTML;
@@ -209,12 +216,13 @@ function finished() {
         modalSelector.classList.add('show');
     }
 }
+
 /**
  * @description: loops through the cards and adds event listeners
  */
-for (let i=0; i <cardArray.length; i++){
-    cardStack= cardArray[i];
-    cardStack.addEventListener('click', openCard);
+for (let i = 0; i < allCardsArray.length; i++) {
+    stackCards = allCardsArray[i];
+    stackCards.addEventListener('click', openCard);
 }
 
 /*
