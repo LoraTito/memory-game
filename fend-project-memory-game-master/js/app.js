@@ -36,7 +36,7 @@ let timer = document.querySelector('.gameTimer');
 /* array to hold open cards */
 let openCards = [];
 
-/* letiables for timer */
+/* timer */
 let second = 0;
 let minute = 0;
 let hour = 0;
@@ -96,130 +96,36 @@ function shuffle(array) {
  * @description: shiffle cards and display them face down
  */
 function displayCards() {
-    allCardsArray = shuffle(allCardsArray);
-    let holder = [];
-    for (let i = 0; i < allCardsArray.length; i++) {
-        deck.innerHTML = '';
-        holder.forEach.call(allCardsArray, function (item) {
-            deck.appendChild(item);
-        });
-        allCardsArray[i].classList.remove('show', 'open', 'match', 'unmatched', 'disabled');
-    }
-    moves = 0;
-    matches = 0;
-    count.innerHTML = 0;
-    for (let i = 0; i < beginCounting.length; i++) {
-        beginCounting[i].style.visibility = 'visible';
-    }
-    /*starts/restarts timer */
-    clearInterval(timePassed);
-    hour = 0;
-    minute = 0;
-    second = 0;
-    timer.innerHTML = hour + ' hours ' + minute + ' mins ' + second + ' secs';
-    endTime.innerHTML = '';
-    endMoves.innerHTML = '';
-    endStar.innerHTML = '';
-    openCards = [];
-    isAnimating = false;
-    modalSelector.classList.remove('show');
-    gameTime();
+    
 }
 
 /**
  * @description: Compare the cards and checks if they are the same ot not
  */
-let openCard = function () {
-    if (isAnimating) return;
-    this.classList.toggle('open');
-    this.classList.toggle('show');
-    this.classList.toggle('disabled');
-    openCards.push(this);
-    let countCards = openCards.length;
-    if (countCards === 2) {
-        movesCounter();
-        if (openCards[0].firstElementChild.className === openCards[1].firstElementChild.className) {
-            matches++;
-            for (let i = 0; i < 2; i++) {
-                openCards[i].classList.add('match');
-                openCards[i].classList.remove('show', 'open');
-            }
-            openCards = [];
-        } else {
-            notMatch();
-        }
-    }
-    finished();
-};
+
 
 /**
  /* delay for cards
  */
-function notMatch() {
-    isAnimating = true;
-    for (let i = 0; i < 2; i++) {
-        openCards[i].classList.add('unmatched');
-    }
-    setTimeout(function () {
-        isAnimating = false;
-        for (let i = 0; i < openCards.length; i++) {
-            openCards[i].classList.remove('show', 'open', 'unmatched', 'disabled');
-        }
-        openCards = [];
-    }, 2000);
-}
 
 /**
  * @description: This code tracks the moves and adjusts the star rating.
  */
-function movesCounter() {
-    moves++;
-    count.innerHTML = moves;
-    if (moves < 30 && moves > 24) {
-        beginCounting[2].style.visibility = 'collapse';
-    } else if (moves > 30) {
-        beginCounting[1].style.visibility = 'collapse';
-    }
-}
 
 /**
  * @description: game timer
  */
-function gameTime() {
-    timePassed = setInterval(function () {
-        timer.innerHTML = hour + ' hours ' + minute + ' mins ' + second + ' secs';
-        second++;
-        if (second === 60) {
-            minute++;
-            second = 0;
-        }
-        if (minute === 60) {
-            hour++;
-            minute = 0;
-        }
-    }, 1000);
-}
+
 
 /**
  * @description: modal for when all cards are matched
  */
-function finished() {
-    if (matches === 8) {
-        clearInterval(timePassed);
-        endTime.innerHTML = timer.innerHTML;
-        endMoves.innerHTML = count.innerHTML;
-        endStar.innerHTML = starList.innerHTML;
-        modalSelector.classList.add('show');
-    }
-}
+
 
 /**
  * @description: loops through the cards and adds event listeners
  */
-for (let i = 0; i < allCardsArray.length; i++) {
-    stackCards = allCardsArray[i];
-    stackCards.addEventListener('click', openCard);
-}
+
 
 /*
  * set up the event listener for a card. If a card is clicked:
