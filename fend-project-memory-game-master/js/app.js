@@ -4,7 +4,7 @@
 
 
 /*
- * Display the cards on the page
+ * Display the cards on     the page
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
@@ -93,7 +93,7 @@ function shuffle(array) {
 }
 
 /**
- * @description: calls the shuffle function and displays all cards face down
+ * @description: shiffle cards and display them face down
  */
 function displayCards() {
     allCardsArray = shuffle(allCardsArray);
@@ -113,7 +113,6 @@ function displayCards() {
     }
     /*starts/restarts timer */
     clearInterval(timePassed);
-    /* resets all letiables and innerHTML */
     hour = 0;
     minute = 0;
     second = 0;
@@ -128,9 +127,7 @@ function displayCards() {
 }
 
 /**
- * @description: open and compare cards
- *opens the cards and pushes it into the array.
- * Compares cards and executes code or calls function whether or not they match.
+ * @description: Compare the cards and checks if they are the same ot not
  */
 let openCard = function () {
     if (isAnimating) return;
@@ -156,7 +153,7 @@ let openCard = function () {
 };
 
 /**
- /* @description: sets delay when cards don't match and flips over
+ /* delay for cards
  */
 function notMatch() {
     isAnimating = true;
@@ -173,8 +170,7 @@ function notMatch() {
 }
 
 /**
- * @description: Adds 1 each time 2 cards are clicked and updates the moves
- * in index.html. Tracks moves and adjusts star rating.
+ * @description: This code tracks the moves and adjusts the star rating.
  */
 function movesCounter() {
     moves++;
