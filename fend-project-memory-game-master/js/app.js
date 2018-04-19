@@ -193,11 +193,11 @@ function gameTime() {
     timePassed = setInterval(function () {
         timer.innerHTML = hour + ' hours ' + minute + ' mins ' + second + ' secs';
         second++;
-        if (second == 60) {
+        if (second === 60) {
             minute++;
             second = 0;
         }
-        if (minute == 60) {
+        if (minute === 60) {
             hour++;
             minute = 0;
         }
