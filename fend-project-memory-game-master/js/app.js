@@ -12,7 +12,7 @@
 /* scores the deck of cards */
 const deck = document.querySelector('.deck');
 
-/* nodelist of all cards */
+/* all cards */
 let stackCards = document.querySelectorAll('.card');
 
 /* creates array initialized to stackCards */
@@ -96,7 +96,25 @@ function shuffle(array) {
  * @description: shiffle cards and display them face down
  */
 function displayCards() {
-    
+    let currentCards = shuffle(allCardsArray);
+    console.log(currentCards);
+       for (let i=0; i < currentCards.length; i++) {
+        let thisCard = currentCards[i];
+        console.log(thisCard);
+            thisCard.onclick.classList.toggle("open");
+        // var element = document.getElementById("myDIV");
+        // element.classList.toggle("mystyle");
+        // currentCards[i].onclick.classList.toggle("show");
+    }
+    // function(card) {
+    //     card.classList.toggle("open");
+    //     card.classList.toggle("show");
+}
+
+function openCard() {
+       this.classList.toggle('open');
+        this.classList.toggle('show');
+        this.classList.toggle('disabled');
 }
 
 /**
