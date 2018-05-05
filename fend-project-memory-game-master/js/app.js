@@ -96,25 +96,29 @@ function shuffle(array) {
  * @description: shiffle cards and display them face down
  */
 function displayCards() {
-    let currentCards = shuffle(allCardsArray);
-    console.log(currentCards);
-    for (let i = 0; i < currentCards.length; i++) {
-        let thisCard = currentCards[i];
-        console.log(thisCard);
-        thisCard.onclick.classList.toggle("open");
+    // let currentCards = shuffle(allCardsArray);
+    // console.log(currentCards);
+    // for (let i = 0; i < currentCards.length; i++) {
+    //     let thisCard = currentCards[i];
+    //     console.log(thisCard);
+    //     openCard(thisCard);
+    let element = document.getElementById("card");
+    element.onclick.classList.add("open");
+        // thisCard.classList.toggle("open").toggle("show");
+
         // var element = document.getElementById("myDIV");
         // element.classList.toggle("mystyle");
         // currentCards[i].onclick.classList.toggle("show");
-    }
+    // }
     // function(card) {
     //     card.classList.toggle("open");
     //     card.classList.toggle("show");
 }
 
-function openCard() {
-    this.classList.toggle('open');
-    this.classList.toggle('show');
-    this.classList.toggle('disabled');
+function openCard(card) {
+    card.classList.toggle('open');
+    // this.card.toggle('show');
+    // this.classList.toggle('disabled');
 }
 
 /**
