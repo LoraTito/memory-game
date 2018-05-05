@@ -17,7 +17,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="856">
+            <state relative-caret-position="1602">
               <caret line="89" column="17" lean-forward="false" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
               <folding />
             </state>
@@ -37,8 +37,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="103" column="38" lean-forward="false" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
+            <state relative-caret-position="502">
+              <caret line="103" column="40" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -113,6 +113,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,7 +149,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,12 +240,13 @@
       <workItem from="1524421833527" duration="600000" />
       <workItem from="1524470131007" duration="696000" />
       <workItem from="1524724887038" duration="2000" />
-      <workItem from="1525113611353" duration="6037000" />
+      <workItem from="1525113611353" duration="10479000" />
+      <workItem from="1525521209327" duration="172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54501000" />
+    <option name="totallyTimeSpent" value="59115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -703,14 +704,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="856">
-          <caret line="89" column="17" lean-forward="false" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -719,10 +712,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="89" column="17" lean-forward="false" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fend-project-memory-game-master/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="103" column="38" lean-forward="false" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
+        <state relative-caret-position="502">
+          <caret line="103" column="40" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

@@ -98,10 +98,10 @@ function shuffle(array) {
 function displayCards() {
     let currentCards = shuffle(allCardsArray);
     console.log(currentCards);
-       for (let i=0; i < currentCards.length; i++) {
+    for (let i = 0; i < currentCards.length; i++) {
         let thisCard = currentCards[i];
         console.log(thisCard);
-            thisCard.onclick.classList.toggle("open");
+        thisCard.onclick.classList.toggle("open");
         // var element = document.getElementById("myDIV");
         // element.classList.toggle("mystyle");
         // currentCards[i].onclick.classList.toggle("show");
@@ -112,9 +112,9 @@ function displayCards() {
 }
 
 function openCard() {
-       this.classList.toggle('open');
-        this.classList.toggle('show');
-        this.classList.toggle('disabled');
+    this.classList.toggle('open');
+    this.classList.toggle('show');
+    this.classList.toggle('disabled');
 }
 
 /**
